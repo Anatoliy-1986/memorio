@@ -1,10 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Mont';
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@font-face { 
+  font-family: "Mont";
+  src: local('Mont'), url(./components/fonts/MontRegular.ttf) format('truetype');
 }
 
 code {
