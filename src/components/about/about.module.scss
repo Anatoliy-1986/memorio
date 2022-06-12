@@ -1,0 +1,266 @@
+@import "../breakpoints";
+
+.menu {
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+
+  @include media("<sm") {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 73px 10px 0;
+  @include media("<sm") {
+    align-items: center;
+    padding: 0;
+    order: 1;
+  }
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 46px;
+  color: #6f7274;
+  padding: 0;
+  margin: 0;
+}
+
+.factory {
+  font-size: 10px;
+  line-height: 13px;
+  color: #636363;
+  padding: 0;
+  margin: 0;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark {
+  margin-right: 8px;
+  @include media("<sm") {
+    display: none;
+  }
+}
+
+.city {
+  line-height: 15px;
+  text-decoration: none;
+  border-bottom: 1px dashed #082e78;
+  @include media("<sm") {
+    display: none;
+  }
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: min-content;
+  border: 2px solid #f6731c;
+  border-radius: 4px;
+  padding: 10px 33px;
+  margin: 18px 27px 19px 0;
+  @include media("<sm") {
+    margin: 15px 20px 20px;
+    order: 2;
+  }
+}
+
+.freeMiscalculation {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 6px;
+}
+
+.orderNow {
+  width: 201px;
+  height: 21px;
+  background: #f6731c;
+  border-radius: 4px;
+  padding: 0;
+  border: none;
+  font-family: "Mont";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 6px;
+  position: relative;
+  @include media("<sm") {
+    background-image: url("./images/nav.svg");
+    width: 100%;
+    order: 0;
+  }
+}
+
+.wrapperLanguage {
+  @include media("<sm") {
+    visibility: hidden;
+    position: absolute;
+    left: 14px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35px;
+    height: 81px;
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    &.active {
+      visibility: visible;
+    }
+  }
+}
+
+.language {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  padding: 0 10px;
+  border: none;
+  background-color: transparent;
+  border-right: 1px solid #000000;
+  &:last-child {
+    border-right: none;
+  }
+  &:hover {
+    color: #f6731c;
+  }
+  &:active {
+    color: #f6731c;
+  }
+  @include media("<sm") {
+    padding: 5px 0;
+    border-right: none;
+    border-bottom: 1px solid #000000;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.burgerMobile {
+  margin-bottom: 8px;
+  @include media("<sm") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.burger {
+  display: none;
+  @include media("<sm") {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 24px;
+    height: min-content;
+    cursor: pointer;
+  }
+}
+
+.strip {
+  display: block;
+  height: 2px;
+  width: 24px;
+  margin-bottom: 5px;
+  background-color: white;
+  border-radius: 100%;
+  opacity: 1;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.phone {
+  font-size: 24px;
+  line-height: 31px;
+  text-decoration: none;
+  border-bottom: 1px dashed #082e78;
+  @include media("<sm") {
+    font-weight: 800;
+    color: #ffffff;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.freeCall {
+  line-height: 15px;
+  text-align: center;
+  color: #082e78;
+  margin: 0;
+  @include media("<sm") {
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #ff3300;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  cursor: pointer;
+  margin-right: 30px;
+  list-style-type: none;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    color: #f6731c;
+  }
+}
+
+.navMenu {
+  background-image: url("./images/nav.svg");
+  height: 67px;
+  @include media("<sm") {
+    display: none;
+  }
+}
